@@ -13,4 +13,4 @@ EXPOSE 7776
 
 USER node
 
-CMD ["node", "web.js"]
+CMD ["node", "main.js"]
