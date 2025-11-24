@@ -9,8 +9,8 @@ COPY package.json ./
 RUN npm cache clean --force && \
     npm install --omit=dev --silent
 
-EXPOSE 7776
+COPY . .
 
-USER node
+EXPOSE 10000
 
 CMD ["node", "main.js"]
