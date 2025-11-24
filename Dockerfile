@@ -1,13 +1,13 @@
-FROM node:16-alpine
+FROM node:18-alpine
 
 ENV TZ=Asia/Shanghai
 
 WORKDIR /app
 
-COPY . /app/
+COPY package.json ./
 
-RUN npm install --production && \
-    npm cache clean --force
+RUN npm cache clean --force && \
+    npm install --omit=dev --silent
 
 EXPOSE 7776
 
